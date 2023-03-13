@@ -10,6 +10,7 @@ router.get("/:platform/:steamId", async (req, res) => {
 
     const { platform, steamId } = req.params;
 
+    // steam/76561198028656944
     const response = await fetch(
       `${process.env.TRACKER_API_URL}/profile/${platform}/${steamId}`,
       {
